@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template, request
+from flask import Flask, redirect, url_for, render_template, request, abort
 # Initialize the Flask application
 app = Flask(__name__)
 
@@ -10,6 +10,8 @@ def index():
 def login():
     if request.method == 'POST' and request.form['username'] == 'admin':
         return redirect(url_for('success'))
+    else:
+        abort(401)
 
     return redirect(url_for('index'))
 
