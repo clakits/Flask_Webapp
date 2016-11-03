@@ -1,0 +1,20 @@
+
+
+{% block content %}
+	<div class="jumbo">
+		<h2>Welcome to ACI!<h2>
+	    <h3>This is the home page for the ACI Advanced Services application demo (GJF)<h3>
+	</div>
+
+	<h1>End Point List:</h1>
+	<table border='1' class='TFtable' width=100%>
+	{% for t in table %}
+	    <tr>
+	    {% for i in t %}
+	        <td>{{ i }}</td>
+	    {% endfor %}
+	    </tr>
+	{% endfor %}
+	 </table>
+
+{% endblock %}
