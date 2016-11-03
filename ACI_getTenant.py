@@ -58,7 +58,7 @@ def get_Tenant_info():
     tableList = []
     row = ('Tenant')
     tableList.append(row)
-    ls = cobra.mit.session.LoginSession('https://10.29.198.36', 'admin', 'ins3965!')
+    ls = cobra.mit.session.LoginSession('https://10.29.198.36/', 'admin', 'ins3965!')
     md = cobra.mit.access.MoDirectory(ls)
     md.login()
     q = ClassQuery('fvTenant')
